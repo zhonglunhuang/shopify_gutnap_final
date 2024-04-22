@@ -1,0 +1,51 @@
+{%- comment -%}
+----------------------------------------------------------------------------------------------------------------------
+ACCORDION COMPONENT
+----------------------------------------------------------------------------------------------------------------------
+
+This component is used to create an accordion (also called as collapsible). It internally uses the "details" HTML
+tag so that it can also be used without any JavaScript.
+
+********************************************
+Supported parameters
+********************************************
+
+* title: the title to use for the toggle button
+* icon: an optional icon attached to the title
+* content: the hidden content inside the accordion
+* open: if set to true the accordion is open by default
+* size: if set to "lg", the font is and spacing is bigger
+* class: any additional class
+* id: an optional ID for the accordion
+{%- endcomment -%}
+
+<details {% if id %}id="{{ id | escape }}"{% endif %} class="{{ class }} accordion {% if size %}accordion--{{ size }}{% endif %} group" aria-expanded="{% if open %}true{% else %}false{% endif %}" is="accordion-disclosure" {% if open %}open{% endif %} {{ block.shopify_attributes }}>
+  <summary>
+    {%- comment -%}iOS 14 does not support flex on the summary itself, so we have to use this extra div{%- endcomment -%}
+    <div class="accordion__toggle bold">
+      <span
+        class="custom-tabs-text"
+        {% if size == 'lg' %}class="h6"{% endif %}
+        style="color: var(--custom-text-sec-color);"
+      >{{- title | newline_to_br -}}</span>
+
+      <span class="circle-chevron group-hover:colors group-expanded:colors group-expanded:rotate">{%- render 'icon' with 'chevron-bottom-small' -%}</span>
+    </div>
+  </summary>
+
+  <div class="custom-accordion__content">
+    {%- if image.id -%}
+      <img src="{{ image | img_url: 'master'}}" alt="">
+    {% elsif block.settings.external_video_url %}
+      <video-media host="{{ block.settings.external_video_url.type }}" {% if block.settings.autoplay %}autoplay class="pointer-events-none"{% endif %}>
+        {%- if block.settings.external_video_url.type == 'youtube' -%}
+          <iframe src="https://www.youtube.com/embed/{{ block.settings.external_video_url.id }}?playsinline=1&{% if block.settings.autoplay %}autoplay=1&controls=0&mute=1&loop=1&{% endif %}playlist={{ block.settings.external_video_url.id }}&enablejsapi=1&rel=0&modestbranding=1&origin={{ 'https://' | append: request.host | url_encode }}" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+        {%- elsif block.settings.external_video_url.type == 'vimeo' -%}
+          <iframe src="https://player.vimeo.com/video/{{ block.settings.external_video_url.id }}?autopause=1&{% if block.settings.autoplay %}background=1&autoplay=1&loop=1&muted=1&{% endif %}transparent=0&responsive=1&portrait=0&title=0&byline=0&color={{ settings.text_color | remove_first: '#' }}" allow="autoplay; encrypted-media;" allowfullscreen="allowfullscreen"></iframe>
+        {%- endif -%}
+      </video-media>
+    {% else %}
+      {{- content -}}
+    {% endif %}
+  </div>
+</details>
