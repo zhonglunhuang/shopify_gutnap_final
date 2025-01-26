@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "slideshow": {
@@ -144,7 +153,7 @@
             "image": "shopify://shop_images/2.jpg",
             "subheading": "深眠3D重力眼罩，100%遮光，一秒全黑好入眠",
             "title": "深眠眼罩",
-            "url": "shopify://products/重力眼罩",
+            "url": "shopify://products/3d_gravity_eyemask",
             "heading_tag": "h5",
             "text_position": "place-self-start-center text-center",
             "text_color": "#ffffff",
@@ -786,21 +795,21 @@
           "type": "tab",
           "settings": {
             "title": "獨創配重設計\n擁抱毯 2.0",
-            "image_picker": "shopify:\/\/shop_images\/9_01db9d62-7710-4a23-a8f7-1332c22236a0.png"
+            "image_picker": "shopify://shop_images/9_01db9d62-7710-4a23-a8f7-1332c22236a0.png"
           }
         },
         "tab_TngxPJ": {
           "type": "tab",
           "settings": {
             "title": "一秒瞬黑\n眠眼罩",
-            "image_picker": "shopify:\/\/shop_images\/9_01db9d62-7710-4a23-a8f7-1332c22236a0.png"
+            "image_picker": "shopify://shop_images/9_01db9d62-7710-4a23-a8f7-1332c22236a0.png"
           }
         },
         "tab_BammWm": {
           "type": "tab",
           "settings": {
             "title": "雙面軟硬兼施無憂枕",
-            "image_picker": "shopify:\/\/shop_images\/9_01db9d62-7710-4a23-a8f7-1332c22236a0.png"
+            "image_picker": "shopify://shop_images/9_01db9d62-7710-4a23-a8f7-1332c22236a0.png"
           }
         }
       },
@@ -833,24 +842,21 @@
           "type": "tab",
           "settings": {
             "title": "獨創配重設計\n擁抱毯 2.0",
-            "sub_title": "QQQQQQQQ",
-            "image_picker": "shopify:\/\/shop_images\/9_01db9d62-7710-4a23-a8f7-1332c22236a0.png"
+            "sub_title": "QQQQQQQQ"
           }
         },
         "tab_TngxPJ": {
           "type": "tab",
           "settings": {
             "title": "一秒瞬黑\n眠眼罩",
-            "sub_title": "QQQQQQQQ",
-            "image_picker": "shopify:\/\/shop_images\/9_01db9d62-7710-4a23-a8f7-1332c22236a0.png"
+            "sub_title": "QQQQQQQQ"
           }
         },
         "tab_BammWm": {
           "type": "tab",
           "settings": {
             "title": "雙面軟硬兼施無憂枕",
-            "sub_title": "QQQQQQQQ",
-            "image_picker": "shopify:\/\/shop_images\/9_01db9d62-7710-4a23-a8f7-1332c22236a0.png"
+            "sub_title": "QQQQQQQQ"
           }
         }
       },
@@ -870,8 +876,8 @@
         "button_color": "#D7DFE0",
         "button_second_color": "#3f86a6",
         "title_color": "#3f86a6",
-        "title_second_color": "#ffd400",
         "sub_title_color": "#3f86a6",
+        "title_second_color": "#ffd400",
         "sub_title_second_color": "#ffffff",
         "heading_color": "#3f86a6",
         "heading_gradient": ""
